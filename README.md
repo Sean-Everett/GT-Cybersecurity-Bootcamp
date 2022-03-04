@@ -3,6 +3,7 @@
 The files in this repository were used to configure the network depicted below.
 
 ![Unit 13 Diagram](https://github.com/Sean-Everett/GT-Cybersecurity-Bootcamp/Diagrams/Unit-13-Diagram.png "Unit 13 Diagram")
+![Unit 13 Diagram](Diagrams/Unit-13-Diagram.png "Unit 13 Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
