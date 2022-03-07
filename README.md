@@ -30,7 +30,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- The load balancer ensures that each host is not overloaded with requests.
+- The load balancer can also handle SSL requests. Our DVWA website is only doing HTTP in this scenario.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system monitoring.
 - _TODO: What does Filebeat watch for?_
@@ -45,6 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1               | Server   | 10.0.0.5   | Ubuntu LTS 20.04 |
 | WEb-2               | Server   | 10.0.0.6   | Ubuntu LTS 20.04 |
 | Web-3               | Server   | 10.0.0.7   | Ubuntu LTS 20.04 |
+
 
 ### Access Policies
 
@@ -64,6 +66,7 @@ A summary of the access policies in place can be found in the table below.
 |          |                     |                      |
 |          |                     |                      |
 
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -78,6 +81,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
+
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
@@ -87,6 +91,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
