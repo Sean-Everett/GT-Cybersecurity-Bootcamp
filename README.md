@@ -31,11 +31,14 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - The load balancer ensures that each host is not overloaded with requests.
+- The load balancer allow you to scale the number of servers hosting the site on the backend without affecting the site's availability. 
 - The load balancer can also handle SSL requests. Our DVWA website is only doing HTTP in this scenario.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system monitoring.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat handles syslog monitoring.
+  - Any changes to the system that are recorded by syslogs will show up in Filebeat.
+- Metricbeat handles the monitoring of system resources.
+  - System usage like CPU, memory, disk, and network statics show up in Metricbeat.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
