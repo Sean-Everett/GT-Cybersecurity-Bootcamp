@@ -56,10 +56,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jumpbox-provisioner and ELK-01 machines can accept connections from the Internet. Access to these machines are only allowed from the following IP addresses:
+- My public IP on port 22.
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by Jumpbox-provisioner via SSH.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
