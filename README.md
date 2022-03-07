@@ -41,14 +41,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
   - System usage like CPU, memory, disk, and network statics show up in Metricbeat.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name                | Function | IP Address | Operating System |
 |---------------------|----------|------------|------------------|
 | ELK-01              | ELK stack | 10.1.0.4  | Ubuntu LTS 20.04 |
 | Jumpbox-Provisioner | Gateway  | 10.0.0.4   | Ubuntu LTS 20.04 |
 | Web-1               | Server   | 10.0.0.5   | Ubuntu LTS 20.04 |
-| WEb-2               | Server   | 10.0.0.6   | Ubuntu LTS 20.04 |
+| Web-2               | Server   | 10.0.0.6   | Ubuntu LTS 20.04 |
 | Web-3               | Server   | 10.0.0.7   | Ubuntu LTS 20.04 |
 
 
@@ -56,20 +55,25 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jumpbox-provisioner and ELK-01 machines can accept connections from the Internet. Access to these machines are only allowed from the following IP addresses:
-- My public IP on port 22.
+Only the Jumpbox-provisioner and ELK machines can accept connections from the Internet. Access to these machines are only allowed from the following IP addresses:
+- My public IP is the only IP whitelisted to allow access via port 22 (SSH) and the ELK server is allowing ports 5044, 5601, and 9200 so that I can view Kibana's web page.
+- The internal web servers are behind a load balancer that are only accepting port 80 (HTTP) access from my public IP.
 
 Machines within the network can only be accessed by Jumpbox-provisioner via SSH.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM?
+  - My home PC has it's public IP whitelisted so that I can view the Kibana web page.
+- What was its IP address?
+  - http://20.114.213.34:5601/app/kibana
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| ELK-01 | Yes | vNet, My Public IP |
+| Jumpbox-Provisioner | Yes | vNet, My Public IP |
+| Web-1 | No | vNet, 10.0.0.4 |
+| Web-2 | No | vNet, 10.0.0.4 |
+| Web-3 | No | vNet, 10.0.0.4 |
 
 ### Elk Configuration
 
