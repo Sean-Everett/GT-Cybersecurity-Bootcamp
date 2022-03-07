@@ -45,6 +45,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name                | Function | IP Address | Operating System |
 |---------------------|----------|------------|------------------|
+| ELK-01              | ELK stack | 10.1.0.4  | Ubuntu LTS 20.04 |
 | Jumpbox-Provisioner | Gateway  | 10.0.0.4   | Ubuntu LTS 20.04 |
 | Web-1               | Server   | 10.0.0.5   | Ubuntu LTS 20.04 |
 | WEb-2               | Server   | 10.0.0.6   | Ubuntu LTS 20.04 |
