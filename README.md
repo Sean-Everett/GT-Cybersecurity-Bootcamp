@@ -63,7 +63,7 @@ Machines within the network can only be accessed by Jumpbox-provisioner via SSH.
 - Which machine did you allow to access your ELK VM?
   - My home PC has it's public IP whitelisted so that I can view the Kibana web page.
 - What was its IP address?
-  - http://20.114.213.34:5601/app/kibana
+  - 20.114.213.34
 
 A summary of the access policies in place can be found in the table below.
 
