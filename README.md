@@ -69,8 +69,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| ELK-01 | Yes | vNet, My Public IP |
-| Jumpbox-Provisioner | Yes | vNet, My Public IP |
+| ELK-01 | Yes, via 20.114.213.34 | vNet, 10.0.0.4, My Public IP |
+| Jumpbox-Provisioner | Yes,  via 20.106.161.137 | vNet, My Public IP |
 | Web-1 | No | vNet, 10.0.0.4 |
 | Web-2 | No | vNet, 10.0.0.4 |
 | Web-3 | No | vNet, 10.0.0.4 |
