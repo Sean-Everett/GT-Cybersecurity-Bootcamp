@@ -169,6 +169,7 @@ SSH into the control node and follow the steps below:
 
 | Command | What the command does |
 |---------|-----------------------|
-| docker container list -all | lists all containers installed. |
-| docker start CONTAINERNAME | will initialize the container |
-| docker attach CONTAINERNAME | gives you CLI access into the container | 
+| sudo docker container list -all | lists all containers installed |
+| sdo docker start CONTAINERNAME | initialize the container by name |
+| sudo docker attach CONTAINERNAME | gives you CLI access into the container | 
+| sudo docker cp CONTAINER/SOURCE/PATH LOCAL/DESTINATION/PATH | copies files from your container to host machine |
