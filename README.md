@@ -165,4 +165,10 @@ SSH into the control node and follow the steps below:
 
 - You now have an ELK server with Filebeat and Metricbeat data collection that you can filter and analyze.
  
-###Some useful commands to help use Docker:
+### Some useful commands to help use Docker:
+
+| Command | What the command does |
+|---------|-----------------------|
+| docker container list -all | lists all containers installed. |
+| docker start CONTAINERNAME | will initialize the container |
+| docker attach CONTAINERNAME | gives you CLI access into the container | 
