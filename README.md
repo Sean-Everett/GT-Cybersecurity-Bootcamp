@@ -150,7 +150,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to ```http://ELK-Public-IP/app/kibana``` to check that the installation worked as expected.
   - ```ansible-playbook /etc/ansible/elk-playbook.yml```
-  - [ELK successful](/Images/kibana.jpg)
+  - ![ELK successful](/Images/kibana.jpg "ELK successful")
 
   
 _TODO: Answer the following questions to fill in the blanks:_
