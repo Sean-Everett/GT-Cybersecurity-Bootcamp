@@ -125,10 +125,10 @@ SSH into the control node and follow the steps below:
 - Update the ansible.cfg file to include your remote user name:
   - remote_user=YOURUSERNAME
 - Update the hosts file to ensure all of your web servers are grouped under "webservers" and add the python interpreter info:
-  - [webservers]
-  - 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-  - 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-  - 10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+  ```[webservers]
+     10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+     10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+     10.0.0.7 ansible_python_interpreter=/usr/bin/python3```
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
