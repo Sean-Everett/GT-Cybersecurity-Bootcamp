@@ -142,10 +142,16 @@ SSH into the control node and follow the steps below:
     - 1106 ```username: "elastic"```
     - 1107 ```password: "changeme"```
     - 1805 ```host: "10.1.0.4:5601"```
-  - Metricbeat config lines
+  - Metricbeat config line numbers:
+    - 62 ```host: "10.1.0.4:5601"```
+    - 95 ```hosts: ["10.1.0.4:9200"]```
+    - 96 ```username: "elastic"```
+    - 97 ```password: "changeme"```
+
 - Run the playbook, and navigate to ```http://ELK-Public-IP/app/kibana``` to check that the installation worked as expected.
-  - ```ansible-playbook /etc/ansible/filebeat-playbook.yml```
-  - 
+  - ```ansible-playbook /etc/ansible/elk-playbook.yml```
+  - [ELK successful](/Images/kibana.jpg)
+
   
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
