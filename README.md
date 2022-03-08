@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
   - [My playbook](/Ansible/my-playbook.yml)
-    - Sets up a set of high available web servers and prepares DVWA.
+    - Sets up a set of highly available web servers and prepares DVWA.
   - [Filebeat playbook](/Ansible/filebeat-playbook.yml)
     - Sets up Filebeat on the web servers to push logs to the ELK server.
   - [Metricbeat playbook](/Ansible/metricbeat-playbook.yml)
@@ -17,7 +17,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 
 ### This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -31,7 +31,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - The load balancer ensures that each host is not overloaded with requests.
-- The load balancer allow you to scale the number of servers hosting the site on the backend without affecting the site's availability. 
+- The load balancer allows you to scale the number of servers hosting the site on the backend without affecting the site's availability. 
 - The load balancer can also handle SSL requests. Our DVWA website is only doing HTTP in this scenario.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system monitoring.
@@ -79,13 +79,13 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - It is scalable. No matter how many servers need to be deployed, you can configure each to be identical.
-- Once a playbook is configured, you remove the human element from making a mistake while trying to configure large numbers of server at one.
-  - One distraction and you forget to modify a varible in the configuration file. Now that server isn't doing what was intended or pointing at the correct IP.
-- It is a massive time saver. Traditional hands on aaproach would take quite a while to configure even a few servers.
+- Once a playbook is configured, you remove the human element from making a mistake while trying to configure large numbers of servers at one.
+  - One distraction and you forget to modify a variable in the configuration file. Now that server isn't doing what was intended or pointing at the correct IP.
+- It is a massive time saver. Traditional hands on approach would take quite a while to configure even a few servers.
 
 The playbook implements the following tasks:
 - Updates the server's repo cache so it knows about docker.io and pip.
-- It sets system variables to a defined value so that it can allocate for virtual memory to ELK.
+- It sets system variables to defined how much virtual memory can be allocated to ELK.
 - Installs docker.io using apt.
 - Installs python3-pip using apt.
 - Installs docker using pip.
@@ -113,7 +113,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Filebeats is aggregating all the syslogs from the web servers so ELK can analyze and display graphical representations of what has been monitored.
   - ![Filebeat Example](/Images/filebeats-example.png)
-- Metricbeats is aggregating all the netrics from the web servers so ELK can visualize system resources like CPU, memory, network, and disk usage.
+- Metricbeats is aggregating all the metrics from the web servers so ELK can visualize system resources like CPU, memory, network, and disk usage.
   - ![Metricbeat Example](/Images/metricbeats-example.png)
 
 ### Using the Playbook
@@ -152,9 +152,9 @@ SSH into the control node and follow the steps below:
   - ```ansible-playbook /etc/ansible/elk-playbook.yml```
   - ![ELK successful](/Images/kibana.jpg "ELK successful")
 
-- Once ELK is successful installed and running, you can now run the [Filebeat playbook](/Ansible/filebeat-playbook.yml).
+- Once ELK is successfully installed and running, you can now run the [Filebeat playbook](/Ansible/filebeat-playbook.yml).
   - ```ansible-playbook /etc/ansible/filebeat-playbook.yml```
-  - You can click Add Log Data > System Logs > DEB for a how to install Filebeat but my playbook does these steps for you.
+  - You can click Add Log Data > System Logs > DEB for how to install Filebeat but my playbook does these steps for you.
   - When the playbook finishes, you can click check data on Kibana to verify ELK is receiving data from the web servers.
   - ![Filebeat successful](/Images/filebeat_success.jpg "Filebeat successful")
 
