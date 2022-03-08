@@ -155,7 +155,12 @@ SSH into the control node and follow the steps below:
 - Once ELK is successful installed and running, you can now run the [Filebeat playbook](/Ansible/filebeat-playbook.yml).
   - ```ansible-playbook /etc/ansible/filebeat-playbook.yml```
   - You can click Add Log Data > System Logs > DEB for a how to install Filebeat but my playbook does these steps for you.
-  - When the playbook finishes, you can click Check Data on Kibana to verify ELK is receiving data from the web servers.
+  - When the playbook finishes, you can click check data on Kibana to verify ELK is receiving data from the web servers.
   - ![Filebeat successful](/Images/filebeat_success.jpg "Filebeat successful")
+
+- You can now run the [Metricbeat playbook](/Ansible/metricbeat-playbook.yml).
+  - ``` ansible-playbook /etc/ansible/metricbeat-playbook.yml```
+  - Back on the Kibana homepage, click Add Metric Data > Docker Metrics > DEB. Like Filebeat, scroll down to check data.
+  - ![Metricbeat successful](/Images/metricbeats_success.jpg "Metricbeat successful")
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
