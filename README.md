@@ -138,10 +138,10 @@ SSH into the control node and follow the steps below:
   ```
 - Ensure the [Filebeat Config](/Ansible/filebeat-config.yml) and [Metricbeat Config](/Ansible/metricbeat-config.yml) files are updated to reflect the IP of your Kibana server.
   - Filebeat config line numbers:
-  - 1105 ```hosts: ["10.1.0.4:9200"]```
-  - 1106 ```username: "elastic"```
-  - 1107 ```password: "changeme"```
-  - 1805 ```host: "10.1.0.4:5601"```
+    - 1105 ```hosts: ["10.1.0.4:9200"]```
+    - 1106 ```username: "elastic"```
+    - 1107 ```password: "changeme"```
+    - 1805 ```host: "10.1.0.4:5601"```
   - Metricbeat config lines
 - Run the playbook, and navigate to ```http://ELK-Public-IP/app/kibana``` to check that the installation worked as expected.
   - ```ansible-playbook /etc/ansible/filebeat-playbook.yml```
