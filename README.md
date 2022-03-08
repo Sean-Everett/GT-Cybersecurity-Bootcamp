@@ -161,6 +161,6 @@ SSH into the control node and follow the steps below:
 - You can now run the [Metricbeat playbook](/Ansible/metricbeat-playbook.yml).
   - ``` ansible-playbook /etc/ansible/metricbeat-playbook.yml```
   - Back on the Kibana homepage, click Add Metric Data > Docker Metrics > DEB. Like Filebeat, scroll down to check data.
-  - ![Metricbeat successful](/Images/metricbeats_success.jpg "Metricbeat successful")
+  - ![Metricbeat successful](/Images/metricbeat_success.jpg "Metricbeat successful")
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
