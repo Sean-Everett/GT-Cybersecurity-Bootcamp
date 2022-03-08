@@ -152,10 +152,10 @@ SSH into the control node and follow the steps below:
   - ```ansible-playbook /etc/ansible/elk-playbook.yml```
   - ![ELK successful](/Images/kibana.jpg "ELK successful")
 
-  
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Once ELK is successful installed and running, you can now run the [Filebeat playbook](/Ansible/filebeat-playbook.yml).
+  - ```ansible-playbook /etc/ansible/filebeat-playbook.yml```
+  - You can click Add Log Data > System Logs > DEB for a how to install Filebeat but my playbook does these steps for you.
+  - When the playbook finishes, you can click Check Data on Kibana to verify ELK is receiving data from the web servers.
+  - ![Filebeat successful](/Images/filebeat_success.jpg "Filebeat successful")
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
