@@ -163,4 +163,6 @@ SSH into the control node and follow the steps below:
   - Back on the Kibana homepage, click Add Metric Data > Docker Metrics > DEB. Like Filebeat, scroll down to check data.
   - ![Metricbeat successful](/Images/metricbeat_success.jpg "Metricbeat successful")
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- You now have an ELK server with Filebeat and Metricbeat data collection that you can filter and analyze.
+ 
+###Some useful commands to help use Docker:
