@@ -113,7 +113,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeats is aggregating all the syslogs from the web servers so ELK can analyze and display graphical representations of what has been monitored.
-  - ![Filebeat Example](/Images/filebeat-example.png)
+  - ![Filebeat Example](/Images/filebeats-example.png)
 - Metricbeats is aggregating all the netrics from the web servers so ELK can visualize system resources.
   - ![Metricbeat Example](/Images/metricbeats-example.png)
 
