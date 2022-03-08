@@ -123,13 +123,19 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the Ansible files from my GitHub directory to "/etc/ansible/" location on your Ansible control node.
 - Update the ansible.cfg file to include your remote user name:
-  - remote_user=YOURUSERNAME
-- Update the hosts file to ensure all of your web servers are grouped under "webservers" and add the python interpreter info:
+  ```
+  remote_user=YOURUSERNAME
+  ```
+- Update the hosts file to ensure all of your servers are grouped according to their group and add the python interpreter info:
   ```
   [webservers]
   10.0.0.5 ansible_python_interpreter=/usr/bin/python3
   10.0.0.6 ansible_python_interpreter=/usr/bin/python3
   10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+  ```
+  ```
+  [elkserver]
+  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
   ```
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
